@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: título específico de esta página -->
+  <title>Cronómetro de Patinaje | Vida Roller</title>
+
+  <!-- SEO: descripción específica de lo que hace esta página -->
+  <meta name="description" content="Usa el cronómetro de Vida Roller para registrar tus tiempos de patinaje en tiempo real y guardar tu historial de entrenamientos.">
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="FondoCronometro">
+
+  <aside class="barra-lateral">
+    <div class="logo-barra-lateral">
+      <span>VIDA ROLLER</span>
+    </div>
+
+    <nav class="menu-lateral">
+      <a href="../pages/app.html" class="enlace-menu"> Inicio / Modelo</a>
+      <a href="../pages/cronometro.html" class="enlace-menu activo"> Cronómetro</a>
+      <a href="../pages/estadisticas.html" class="enlace-menu">Estadísticas</a>
+      <a href="../pages/noticias.html" class="enlace-menu">Noticias</a>
+      <a href="../pages/comentarios.html" class="enlace-menu">Comentarios</a>
+    </nav>
+
+    <div class="pie-barra-lateral">
+      <a href="../index.html" class="enlace-salir">← Salir al Inicio</a>
+    </div>
+  </aside>
+
+  <main class="contenido-principal columna">
+
+    <!-- SEO: h1 único, oculto visualmente pero visible para Google/lectores de pantalla -->
+    <h1 class="titulo-oculto-seo">Cronómetro de Patinaje</h1>
+
+    <div class="tarjeta-cronometro">
+      <div class="pantalla-tiempo" id="pantallaTiempo">00:00:00.0</div>
+
+      <div class="controles-cronometro">
+        <button id="botonIniciar" class="boton-cronometro boton-iniciar">Iniciar</button>
+        <button id="botonPausar" class="boton-cronometro boton-pausar" disabled>Pausar</button>
+        <button id="botonReiniciar" class="boton-cronometro boton-reiniciar">Reiniciar</button>
+      </div>
+
+      <button id="botonGuardarTiempo" class="boton-cronometro boton-guardar" disabled>Guardar Tiempo</button>
+    </div>
+
+    <div class="tarjeta-tabla-tiempos">
+      <!-- SEO: bajé este de h3 a h2, para que respete la jerarquía (h1 > h2 > h3) -->
+      <h2 class="titulo-tabla-tiempos">Tiempos Guardados</h2>
+      <table class="tabla-tiempos-guardados">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Tiempo</th>
+            <th>Fecha</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTablaTiempos">
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <script src="../javascript/cronometro.js"></script>
+</body>
+</html>

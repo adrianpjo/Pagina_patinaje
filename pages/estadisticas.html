@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estadísticas | Vida Roller</title>
+  <meta
+    name="description"
+    content="Consulta tus estadísticas y evolución de tiempos de patinaje en Vida Roller.">
+
+ 
+  <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body class="FondoCronometro">
+
+  <!-- Barra lateral para navegar entre las páginas -->
+  <aside class="barra-lateral">
+
+    <div class="logo-barra-lateral">
+      <span>VIDA ROLLER</span>
+    </div>
+
+    <nav class="menu-lateral">
+
+      <a href="../pages/app.html" class="enlace-menu">Inicio / Modelo</a>
+      <a href="../pages/cronometro.html" class="enlace-menu">Cronómetro </a>
+
+      <!-- "activo" indica que esta es la página actual -->
+      <a href="../pages/estadisticas.html" class="enlace-menu activo">Estadísticas</a>
+
+      <a href="../pages/noticias.html" class="enlace-menu">Noticias</a>
+
+      <a href="../pages/comentarios.html" class="enlace-menu"> Comentarios</a>
+
+    </nav>
+
+    <!-- Enlace para regresar a la página de inicio -->
+    <div class="pie-barra-lateral">
+
+      <a href="../index.html" class="enlace-salir">
+        ← Salir al Inicio
+      </a>
+
+    </div>
+
+  </aside>
+
+
+  <!-- Contenido principal de la página -->
+  <main class="contenido-estadisticas">
+
+    <section class="contenedor-estadisticas">
+
+      <h1>Mis Estadísticas</h1>
+
+      <p class="texto-introductorio-estadisticas">
+        Consulta tu rendimiento y observa cómo han evolucionado
+        tus tiempos de patinaje.
+      </p>
+
+
+      <!--
+        Tarjetas con las estadísticas.
+        Los valores se actualizan mediante JavaScript
+        utilizando los ID de cada elemento.
+      -->
+      <div class="grid-estadisticas">
+
+
+        <!-- Muestra el menor tiempo registrado -->
+        <div class="tarjeta-estadistica">
+
+          <span class="titulo-estadistica">
+            Mejor tiempo
+          </span>
+
+          <strong id="mejorTiempo">
+            Sin datos
+          </strong>
+
+        </div>
+
+
+        <!-- Muestra el mayor tiempo registrado -->
+        <div class="tarjeta-estadistica">
+
+          <span class="titulo-estadistica">
+            Peor tiempo
+          </span>
+
+          <strong id="peorTiempo">
+            Sin datos
+          </strong>
+
+        </div>
+
+
+        <!-- Muestra el promedio de los tiempos -->
+        <div class="tarjeta-estadistica">
+
+          <span class="titulo-estadistica">
+            Tiempo promedio
+          </span>
+
+          <strong id="promedioTiempo">
+            Sin datos
+          </strong>
+
+        </div>
+
+
+        <!-- Muestra la cantidad de tiempos guardados -->
+        <div class="tarjeta-estadistica">
+
+          <span class="titulo-estadistica">
+            Tiempos registrados
+          </span>
+
+          <strong id="cantidadTiempos">
+            0
+          </strong>
+
+        </div>
+
+
+        <!-- Muestra el último tiempo registrado -->
+        <div class="tarjeta-estadistica">
+
+          <span class="titulo-estadistica">
+            Último tiempo
+          </span>
+
+          <strong id="ultimoTiempo">
+            Sin datos
+          </strong>
+
+        </div>
+
+
+        <!-- Muestra la diferencia entre el peor y mejor tiempo -->
+        <div class="tarjeta-estadistica">
+
+          <span class="titulo-estadistica">
+            Diferencia
+          </span>
+
+          <strong id="diferenciaTiempos">
+            Sin datos
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- Historial de todos los tiempos registrados -->
+      <div class="tarjeta-historial-estadisticas">
+
+        <h2>Historial de tiempos</h2>
+
+        <!--
+          JavaScript agrega aquí los tiempos guardados
+          en el cronómetro.
+        -->
+        <div
+          class="lista-estadisticas"
+          id="listaEstadisticas">
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Conecta la página con el archivo JavaScript de estadísticas -->
+  <script src="../javascript/estadisticas.js"></script>
+
+</body>
+</html>
+```

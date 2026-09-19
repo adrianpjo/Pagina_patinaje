@@ -1,0 +1,943 @@
+/* Reset general de la página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Contenedor principal con imagen de fondo y capa transparente superpuesta */
+.PaginaBienvenida {
+  min-height: 100vh;
+  background: 
+    linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(0, 0, 0, 0.85) 100%),
+    url('../assets/imagen_inicio.jpg') no-repeat center center / cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #f8fafc;
+}
+.contenedor_logo{
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px; 
+}
+
+.contenedor_logo img {
+  width: 200px;
+  height: auto;
+}
+
+.Nombre {
+  margin: 8px 0 0 0;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Tarjeta central flotante */
+.bienvenida {
+  background: rgba(16, 25, 40, 0.65);
+  backdrop-filter: blur(1px); /* Desenfoque detrás de la tarjeta */
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.Encabezado {
+  margin-bottom: 1.2rem; 
+}
+
+/* Título */
+.EncabezadoTitulo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #38bdf8; /* Ajustado a cian para asegurar buen contraste */
+}
+
+/* Descripción */
+.BienvenidaDescripcion {
+  color: #fdfeff;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor del botón */
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo del botón de inicio */
+.btnInicioEstilo {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #70b5d5;
+  color: #0f172a;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.btnInicioEstilo:hover {
+  background: #7dd3fc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+}
+ 
+/* segunda pantalla */
+
+.cuerpo-panel {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  color: #f8fafc;
+  font-family: system-ui, -apple-system, sans-serif;
+
+  /* 1. CAPA OSCURA + IMAGEN DE FONDO COMPLETA */
+  background: 
+    url('../assets/imagen_patinadora.jpg') no-repeat center center / cover;
+  background-attachment: fixed;
+}
+
+/* BARRA LATERAL (Efecto Cristal que desenfoca la imagen de fondo) */
+.barra-lateral {
+  width: 260px;
+  /* Fondo oscuro semi-transparente (45% de opacidad) */
+  background: rgba(15, 23, 42, 0.45); 
+  
+  /* ESTAS LÍNEAS CREAN EL DIFUMINADO DE LOS COLORES DE ATRÁS */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1.2rem;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.logo-barra-lateral span {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+
+.menu-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.enlace-menu {
+  display: block;
+  padding: 0.85rem 1rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.enlace-menu:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.enlace-menu.activo {
+  background: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+}
+
+.pie-barra-lateral {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+/* ÁREA PRINCIPAL DERECHA */
+.contenido-principal {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinea el bloque de texto a la derecha */
+  padding: 3rem 5rem;
+}
+
+/* CAJA DE TEXTO CON EFECTO CRISTAL ELEGANTE */
+.seccion-informativa {
+  max-width: 480px;
+  background: rgba(1, 5, 7, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 3px solid rgba(93, 203, 218, 0.1);
+  box-shadow: 0 20px 40px rgba(137, 19, 19, 0.4);
+}
+
+.seccion-informativa h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 0.8rem 0;
+  line-height: 1.2;
+}
+
+.seccion-informativa .subtitulo {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.lista-caracteristicas {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.elemento-caracteristica h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+  color: #38bdf8;
+}
+
+.elemento-caracteristica p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Estilo para el link "Salir al Inicio" del pie de la barra lateral */
+.enlace-salir {
+  display: block;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.enlace-salir:hover {
+  color: #38bdf8;
+}
+
+
+
+
+
+/* TARJETA CONTENEDORA DEL CRONÓMETRO */
+
+/* ============================================
+   FONDO DE LA PÁGINA DEL CRONÓMETRO
+   ============================================ */
+.FondoCronometro {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  color: #f8fafc;
+  font-family: system-ui, -apple-system, sans-serif;
+
+  background: 
+    url('../assets/fondoCronometro.jpg') no-repeat center center / cover;
+  background-attachment: fixed;
+}
+
+/* ============================================
+   VARIANTE DE .contenido-principal PARA APILAR EN COLUMNA
+   (no toca el .contenido-principal base, así no afecta a Inicio)
+   ============================================ */
+.contenido-principal.columna {
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ============================================
+   TARJETA 1: EL CRONÓMETRO — ancho independiente
+   ============================================ */
+.tarjeta-cronometro {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(1, 5, 7, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 3px solid rgba(93, 203, 218, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.pantalla-tiempo {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #38bdf8;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.controles-cronometro {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.boton-cronometro {
+  padding: 0.75rem 1.4rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.boton-cronometro:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(56, 189, 248, 0.3);
+}
+
+.boton-cronometro:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.boton-iniciar {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.boton-pausar {
+  background: #f59e0b;
+  color: #0f172a;
+}
+
+.boton-reiniciar {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.boton-guardar {
+  background: #22c55e;
+  color: #0f172a;
+  width: 100%;
+}
+
+/* ============================================
+   TARJETA 2: TABLA DE TIEMPOS — ancho independiente
+   ============================================ */
+.tarjeta-tabla-tiempos {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(1, 5, 7, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  padding: 1.8rem;
+  border-radius: 20px;
+  border: 3px solid rgba(93, 203, 218, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.titulo-tabla-tiempos {
+  color: #38bdf8;
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.tabla-tiempos-guardados {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.tabla-tiempos-guardados thead th {
+  color: #38bdf8;
+  font-weight: 700;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+}
+
+.tabla-tiempos-guardados tbody td {
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+}
+
+.fila-tiempo-guardado:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.numero-tiempo {
+  color: #94a3b8;
+  width: 30px;
+}
+
+.valor-tiempo {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.fecha-tiempo {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.boton-eliminar-tiempo {
+  background: transparent;
+  border: none;
+  color: #f87171;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.boton-eliminar-tiempo:hover {
+  transform: scale(1.2);
+}
+
+.mensaje-lista-vacia {
+  text-align: center;
+  color: #94a3b8;
+  padding: 1.5rem 0;
+  font-style: italic;
+}
+
+
+
+/*SEO*/
+
+.titulo-oculto-seo {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.titulo-principal {
+  color: #38bdf8;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL DE LA PÁGINA DE NOTICIAS
+   ============================================ */
+.contenido-noticias {
+  flex: 1;
+  padding: 3rem 4rem;
+  overflow-y: auto; /* por si el contenido es más alto que la pantalla */
+}
+
+/* ENCABEZADO: título + texto introductorio, ambos centrados */
+.encabezado-noticias {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+.TituloNoticias {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #38bdf8;
+  margin-bottom: 1rem;
+}
+
+.textoIntroductorio {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* TÍTULO DE LA SECCIÓN DE NOTICIAS */
+.titulo-seccion {
+  color: #f8fafc;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ============================================
+   GRID DE TARJETAS DE NOTICIAS
+   ============================================ */
+.lista-noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta-noticia {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(1, 5, 7, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 3px solid rgba(93, 203, 218, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.tarjeta-noticia:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta-noticia img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.contenido-tarjeta-noticia {
+  padding: 1.2rem;
+}
+
+.contenido-tarjeta-noticia h3 {
+  color: #38bdf8;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.contenido-tarjeta-noticia p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+
+ 
+/* ============================================
+   GRID DE TARJETAS DE NOTICIAS
+   ============================================ */
+.lista-noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+}
+ 
+.tarjeta-noticia {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(1, 5, 7, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 3px solid rgba(93, 203, 218, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+ 
+.tarjeta-noticia:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+}
+ 
+.tarjeta-noticia img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+ 
+.contenido-tarjeta-noticia {
+  padding: 1.2rem;
+}
+ 
+.contenido-tarjeta-noticia h3 {
+  color: #38bdf8;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+ 
+.contenido-tarjeta-noticia p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+ 
+/* ============================================
+   CONTENEDOR PRINCIPAL DE LA PÁGINA DE COMENTARIOS
+   ============================================ */
+.contenido-comentarios {
+  flex: 1;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+}
+ 
+/* TARJETA GENERAL QUE ENVUELVE TODO EL BUZÓN */
+.buzon-sugerencias {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(1, 5, 7, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 3px solid rgba(93, 203, 218, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+ 
+.buzon-sugerencias h1 {
+  color: #38bdf8;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+ 
+.texto-introductorio-buzon {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+ 
+/* ============================================
+   FORMULARIO
+   ============================================ */
+.formulario-sugerencia {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+ 
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+ 
+.campo-grupo label {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+ 
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  color: #f8fafc;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+ 
+.campo-grupo input::placeholder,
+.campo-grupo textarea::placeholder {
+  color: #64748b;
+}
+ 
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+ 
+.campo-grupo textarea {
+  resize: vertical; /* deja redimensionar solo verticalmente, no a lo ancho */
+}
+ 
+/* El select necesita un poco de ayuda para verse bien con fondo oscuro */
+.campo-grupo select {
+  cursor: pointer;
+}
+ 
+.campo-grupo select option {
+  background: #0f172a;
+  color: #f8fafc;
+}
+ 
+.btn-enviar {
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+ 
+.btn-enviar:hover {
+  background: #7dd3fc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(56, 189, 248, 0.3);
+}
+ 
+/* ============================================
+   LISTA DE COMENTARIOS
+   ============================================ */
+.contenedor-comentarios h2 {
+  color: #f8fafc;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+ 
+.lista-comentarios {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+ 
+.tarjeta-comentario {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+}
+ 
+.cabecera-comentario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+ 
+.autor {
+  color: #38bdf8;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+ 
+.etiqueta-categoria {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px; /* pastilla completamente redondeada */
+}
+ 
+.texto-comentario {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+ 
+.mensaje-comentarios-vacio {
+  text-align: center;
+  color: #94a3b8;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+
+/* ============================================
+   ESTADÍSTICAS - VIDA ROLLER
+   ============================================ */
+
+/* Contenedor principal de la página */
+.contenido-estadisticas {
+  flex: 1;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+}
+
+/* Contenedor general de las estadísticas */
+.contenedor-estadisticas {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Título principal */
+.contenedor-estadisticas h1 {
+  color: #38bdf8;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Texto debajo del título */
+.texto-introductorio-estadisticas {
+  color: #cbd5e1;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+/* ============================================
+   TARJETAS DE ESTADÍSTICAS
+   ============================================ */
+
+/* Organiza las tarjetas en una cuadrícula */
+.grid-estadisticas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Diseño de cada tarjeta */
+.tarjeta-estadistica {
+  background: rgba(1, 5, 7, 0.55);
+  border: 1px solid rgba(93, 203, 218, 0.15);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Nombre de la estadística */
+.titulo-estadistica {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Valor de la estadística */
+.tarjeta-estadistica strong {
+  display: block;
+  color: #38bdf8;
+  font-size: 1.5rem;
+}
+
+
+/* ============================================
+   HISTORIAL DE TIEMPOS
+   ============================================ */
+
+/* Contenedor del historial */
+.tarjeta-historial-estadisticas {
+  margin-top: 2rem;
+  background: rgba(1, 5, 7, 0.55);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+/* Título del historial */
+.tarjeta-historial-estadisticas h2 {
+  color: #f8fafc;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Lista donde JavaScript coloca los tiempos */
+.lista-estadisticas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+/* Cada registro del historial */
+.elemento-historial-estadistica {
+  display: grid;
+  grid-template-columns: 1fr auto 1.5fr;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+}
+
+/* Número o nombre del registro */
+.elemento-historial-estadistica span {
+  color: #cbd5e1;
+}
+
+/* Tiempo registrado */
+.elemento-historial-estadistica strong {
+  color: #38bdf8;
+}
+
+/* Fecha del registro */
+.elemento-historial-estadistica small {
+  color: #64748b;
+  text-align: right;
+}
+
+/* Mensaje cuando todavía no existen tiempos */
+.mensaje-estadisticas-vacio {
+  color: #94a3b8;
+  text-align: center;
+  font-style: italic;
+  padding: 1rem;
+}
+
+
+/* ============================================
+   ADAPTACIÓN PARA CELULARES
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* Reduce el espacio lateral */
+  .contenido-estadisticas {
+    padding: 2rem 1rem;
+  }
+
+  /* Las tarjetas pasan a una sola columna */
+  .grid-estadisticas {
+    grid-template-columns: 1fr;
+  }
+
+  /* El historial también se adapta a una columna */
+  .elemento-historial-estadistica {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* Centra la fecha en dispositivos pequeños */
+  .elemento-historial-estadistica small {
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: título y descripción específicos de esta página -->
+  <title>Comentarios y Sugerencias | Vida Roller</title>
+  <meta name="description" content="Comparte tus sugerencias y lee los comentarios de la comunidad de patinaje en Vida Roller.">
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="FondoCronometro">
+  <aside class="barra-lateral">
+    <div class="logo-barra-lateral">
+      <span>VIDA ROLLER</span>
+    </div>
+
+    <nav class="menu-lateral">
+      <a href="../pages/app.html" class="enlace-menu"> Inicio / Modelo</a>
+      <a href="../pages/cronometro.html" class="enlace-menu"> Cronómetro</a>
+      <a href="../pages/estadisticas.html" class="enlace-menu">Estadísticas</a>
+      <a href="../pages/noticias.html" class="enlace-menu">Noticias</a>
+      <a href="../pages/comentarios.html" class="enlace-menu activo">Comentarios</a>
+    </nav>
+
+    <div class="pie-barra-lateral">
+      <a href="../index.html" class="enlace-salir">← Salir al Inicio</a>
+    </div>
+  </aside>
+
+  <main class="contenido-comentarios">
+    <section class="buzon-sugerencias">
+
+      <!-- SEO: único h1 de la página -->
+      <h1>Buzón de Sugerencias</h1>
+      <p class="texto-introductorio-buzon">¡Tu opinión importa! Déjanos tus comentarios o sugerencias para mejorar la comunidad del patinaje.</p>
+
+      <form class="formulario-sugerencia" id="formSugerencia">
+        <div class="campo-grupo">
+          <label for="nombre">Nombre o Apodo:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Patinador23" required>
+        </div>
+
+        <div class="campo-grupo">
+          <label for="categoria">Categoría:</label>
+          <select id="categoria" name="categoria" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="sugerencia">Sugerencia general</option>
+            <option value="evento">Noticias / Eventos</option>
+            <option value="pista">Pistas y Rutas</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="campo-grupo">
+          <label for="mensaje">Tu Comentario:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu mensaje..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Publicar Comentario</button>
+      </form>
+
+      <div class="contenedor-comentarios">
+        <h2>Comentarios Recientes</h2>
+
+        <div class="lista-comentarios" id="listaComentarios">
+          <!-- Los comentarios guardados se insertan aquí dinámicamente con JS -->
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="../javascript/comentarios.js"></script>
+</body>
+</html>
